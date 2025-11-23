@@ -35,7 +35,7 @@ class ProxyAvailableWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: ListTile(
-              leading: const Icon(Icons.vpn_lock, color: AppColors.greenColor),
+              leading: Icon(Icons.vpn_lock, color: AppColors.greenColor),
               title: Text(
                 proxyName.toUpperCase(),
                 style: TextStyle(color: AppColors.greenColor, fontSize: 16),
@@ -45,23 +45,23 @@ class ProxyAvailableWidget extends StatelessWidget {
                 children: [
                   Text(
                     "Type : ${proxyType.toUpperCase()}",
-                    style: const TextStyle(color: AppColors.greenColor),
+                    style: TextStyle(color: AppColors.greenColor),
                   ),
                   Text(
                     "Server : $proxyServer",
-                    style: const TextStyle(color: AppColors.greenColor),
+                    style: TextStyle(color: AppColors.greenColor),
                   ),
                   Text(
                     "Port : $proxyServerPort",
-                    style: const TextStyle(color: AppColors.greenColor),
+                    style: TextStyle(color: AppColors.greenColor),
                   ),
                   Text(
                     "Username : $proxyServerUsername",
-                    style: const TextStyle(color: AppColors.greenColor),
+                    style: TextStyle(color: AppColors.greenColor),
                   ),
                   Text(
                     "Password : $proxyServerPassword",
-                    style: const TextStyle(color: AppColors.greenColor),
+                    style: TextStyle(color: AppColors.greenColor),
                   ),
                 ],
               ),
@@ -71,7 +71,7 @@ class ProxyAvailableWidget extends StatelessWidget {
                     DeleteProxyEvent(proxyId: proxyId),
                   );
                 },
-                icon: const Icon(Icons.delete, color: AppColors.brightRed),
+                icon: Icon(Icons.delete, color: AppColors.brightRed),
               ),
             ),
           ),

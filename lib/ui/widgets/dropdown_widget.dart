@@ -34,7 +34,7 @@ class DropdownWidget extends StatelessWidget {
           ),
           value: selectedValue,
           isExpanded: true,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.greenColor,
             fontSize: 15,
             fontWeight: FontWeight.w600,

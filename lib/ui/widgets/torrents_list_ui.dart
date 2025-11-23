@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:torrents_digger/blocs/torrent_bloc/torrent_bloc.dart';
 import 'package:torrents_digger/configs/colors.dart';
@@ -26,11 +27,20 @@ class TorrentsListUi extends StatelessWidget {
           case TorrentSearchSuccess():
             return state.torrents.isEmpty
                 ? const Center(child: Text("No Torrent Found..."))
-                : Column(
-                    children: [
-                      TorrentListWidget(torrents: state.torrents),
-                      PaginationWidget(),
-                    ],
+                : AnimationLimiter(
+                    child: Column(
+                      children: AnimationConfiguration.toStaggeredList(
+                        duration: const Duration(milliseconds: 375),
+                        childAnimationBuilder: (widget) => SlideAnimation(
+                          verticalOffset: 50.0,
+                          child: FadeInAnimation(child: widget),
+                        ),
+                        children: [
+                          TorrentListWidget(torrents: state.torrents),
+                          PaginationWidget(),
+                        ],
+                      ),
+                    ),
                   );
           case TorrentSearchFailure():
             return Center(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:torrents_digger/blocs/settings_bloc/settings_bloc.dart';
+import 'package:torrents_digger/blocs/theme_bloc/theme_bloc.dart';
+import 'package:torrents_digger/configs/app_theme.dart';
 import 'package:torrents_digger/configs/colors.dart';
 import 'package:torrents_digger/routes/routes_name.dart';
 import 'package:torrents_digger/ui/widgets/about_widget.dart';
@@ -44,6 +46,33 @@ class SettingsScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 25),
+                    ListTile(
+                      leading: const Icon(Icons.color_lens),
+                      title: const Text('Theme'),
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: const Text(
+                                'Select Theme',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              backgroundColor: AppColors.cardColor,
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  _buildThemeOption(context, DarkTheme()),
+                                  _buildThemeOption(context, LightTheme()),
+                                  _buildThemeOption(context, TokyoBlueTheme()),
+                                  _buildThemeOption(context, BlueTheme()),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
                     ListTile(
                       leading: const Icon(Icons.hub),
                       title: const Text('Default Trackers'),
@@ -135,6 +164,19 @@ class SettingsScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  Widget _buildThemeOption(BuildContext context, AppTheme theme) {
+    return ListTile(
+      title: Text(
+        theme.name,
+        style: TextStyle(color: AppColors.cardPrimaryTextColor),
+      ),
+      onTap: () {
+        context.read<ThemeBloc>().add(ChangeTheme(theme));
+        Navigator.pop(context);
+      },
     );
   }
 }

@@ -72,7 +72,7 @@ class SourcesAndCategoriesDropdown extends StatelessWidget {
         child: DropdownButton<String>(
           value: selectedSource,
           isExpanded: true,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.greenColor,
             fontSize: 15,
             fontWeight: FontWeight.w600,
@@ -100,7 +100,7 @@ class SourcesAndCategoriesDropdown extends StatelessWidget {
         child: DropdownButton<String>(
           value: selectedCategory,
           isExpanded: true,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.greenColor,
             fontSize: 15,
             fontWeight: FontWeight.w600,

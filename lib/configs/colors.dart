@@ -1,72 +1,66 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:torrents_digger/configs/app_theme.dart';
+
 class AppColors {
-  static const pureBlack = Color.fromRGBO(0, 0, 0, 1);
-  static const pureWhite = Color.fromRGBO(255, 255, 255, 1);
-  static const greenColor = Color.fromRGBO(0, 255, 0, 1);
-  static const brightRed = Color.fromRGBO(255, 0, 0, 1);
+  static AppTheme currentTheme = DarkTheme();
 
-  static const searchBarPlaceholderColor = Color.fromRGBO(238, 241, 82, 1);
-  static const searchBarBackgroundColor = Color.fromRGBO(17, 44, 39, 1);
+  static Color get pureBlack => currentTheme.pureBlack;
+  static Color get pureWhite => currentTheme.pureWhite;
+  static Color get greenColor => currentTheme.greenColor;
+  static Color get brightRed => currentTheme.brightRed;
 
-  static const sourcesDropdownBackgroundColor = Color.fromRGBO(9, 74, 11, 1);
-  static const categoriesDropdownBackgroundColor = Color.fromRGBO(9, 74, 11, 1);
-  static const sourcesDropdownOpenedBackgroundColor = Color.fromRGBO(
-    1,
-    1,
-    1,
-    1,
-  );
-  static const categoriesDropdownOpenedBackgroundColor = Color.fromRGBO(
-    1,
-    1,
-    1,
-    1,
-  );
+  static Color get searchBarPlaceholderColor =>
+      currentTheme.searchBarPlaceholderColor;
+  static Color get searchBarBackgroundColor =>
+      currentTheme.searchBarBackgroundColor;
 
-  static const sourceLabelColor = Color.fromRGBO(0, 255, 247, 1);
-  static const categoryLabelColor = Color.fromRGBO(0, 255, 247, 1);
-  static const cardColor = Color.fromRGBO(33, 33, 33, 1);
+  static Color get sourcesDropdownBackgroundColor =>
+      currentTheme.sourcesDropdownBackgroundColor;
+  static Color get categoriesDropdownBackgroundColor =>
+      currentTheme.categoriesDropdownBackgroundColor;
+  static Color get sourcesDropdownOpenedBackgroundColor =>
+      currentTheme.sourcesDropdownOpenedBackgroundColor;
+  static Color get categoriesDropdownOpenedBackgroundColor =>
+      currentTheme.categoriesDropdownOpenedBackgroundColor;
 
-  static const cardPrimaryTextColor = Color.fromRGBO(255, 255, 255, 1);
-  static const cardSecondaryTextColor = Color.fromRGBO(202, 188, 188, 1);
+  static Color get sourceLabelColor => currentTheme.sourceLabelColor;
+  static Color get categoryLabelColor => currentTheme.categoryLabelColor;
+  static Color get cardColor => currentTheme.cardColor;
 
-  static const leechersIconColor = Color.fromRGBO(255, 0, 0, 1);
-  static const leechersTextColor = Color.fromRGBO(223, 33, 33, 1);
-  static const seedersIconColor = Color.fromRGBO(0, 255, 38, 1);
-  static const seedersTextColor = Color.fromRGBO(18, 204, 46, 1);
-  static const creationDateIconColor = Color.fromRGBO(18, 204, 46, 1);
-  static const creationDateTextColor = Color.fromRGBO(18, 204, 46, 1);
+  static Color get cardPrimaryTextColor => currentTheme.cardPrimaryTextColor;
+  static Color get cardSecondaryTextColor => currentTheme.cardSecondaryTextColor;
 
-  static const magnetBackgroundColor = Color.fromRGBO(0, 0, 0, 1);
-  static const magnetForegroundColor = Color.fromRGBO(0, 255, 132, 0.888);
-  static const magnetIconColor = Color.fromRGBO(0, 247, 255, 1);
-  static const magnetButtonSurfaceTintColor = Color.fromRGBO(247, 0, 255, 1);
+  static Color get leechersIconColor => currentTheme.leechersIconColor;
+  static Color get leechersTextColor => currentTheme.leechersTextColor;
+  static Color get seedersIconColor => currentTheme.seedersIconColor;
+  static Color get seedersTextColor => currentTheme.seedersTextColor;
+  static Color get creationDateIconColor => currentTheme.creationDateIconColor;
+  static Color get creationDateTextColor => currentTheme.creationDateTextColor;
 
-  static const bookmarkIconColor = Color.fromRGBO(135, 200, 189, 1);
-  static const bookmarkedIconColor = Color.fromRGBO(145, 255, 0, 1);
+  static Color get magnetBackgroundColor => currentTheme.magnetBackgroundColor;
+  static Color get magnetForegroundColor => currentTheme.magnetForegroundColor;
+  static Color get magnetIconColor => currentTheme.magnetIconColor;
+  static Color get magnetButtonSurfaceTintColor =>
+      currentTheme.magnetButtonSurfaceTintColor;
 
-  static const addTrackersListUrlTextFieldBackgroundColor = Color.fromARGB(
-    255,
-    40,
-    52,
-    54,
-  );
-  static const addTrackersListUrlTextButtonTextColor = Color.fromARGB(
-    255,
-    0,
-    255,
-    242,
-  );
-  static const addTrackersListUrlTextButtonBorderColor = Color.fromARGB(
-    255,
-    41,
-    55,
-    57,
-  );
+  static Color get bookmarkIconColor => currentTheme.bookmarkIconColor;
+  static Color get bookmarkedIconColor => currentTheme.bookmarkedIconColor;
 
-  static const hyperlinkColor = Color.fromRGBO(118, 131, 224, 1);
-  static const defaultTrackersInfoColor = Color.fromRGBO(255, 255, 255, 0.7);
-  static const textFormFieldInactiveColor = Color.fromRGBO(69, 130, 127, 1);
-  static const textFormFieldActiveColor = Color.fromRGBO(0, 255, 0, 1);
+  static Color get addTrackersListUrlTextFieldBackgroundColor =>
+      currentTheme.addTrackersListUrlTextFieldBackgroundColor;
+  static Color get addTrackersListUrlTextButtonTextColor =>
+      currentTheme.addTrackersListUrlTextButtonTextColor;
+  static Color get addTrackersListUrlTextButtonBorderColor =>
+      currentTheme.addTrackersListUrlTextButtonBorderColor;
+
+  static Color get hyperlinkColor => currentTheme.hyperlinkColor;
+  static Color get defaultTrackersInfoColor =>
+      currentTheme.defaultTrackersInfoColor;
+  static Color get textFormFieldInactiveColor =>
+      currentTheme.textFormFieldInactiveColor;
+  static Color get textFormFieldActiveColor =>
+      currentTheme.textFormFieldActiveColor;
 }
+
